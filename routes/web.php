@@ -37,3 +37,6 @@ Route::group(['namespace' => 'admin'], function() {
     Route::get('/admin/user',[AdminController::class, 'adminUser']);
     Route::get('/admin/user/upload',[AdminController::class, 'upload']);
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
